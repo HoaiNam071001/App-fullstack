@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server",
+    "build": "cd font-end/ && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
