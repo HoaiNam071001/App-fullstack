@@ -1,0 +1,69 @@
+.random-sys{
+    font-weight: bold;
+    display:block;
+    margin:6px 0px 20px 10px;
+}
+.random-execute{
+    padding: 5%;
+    background-color:#ffffff;
+    border-radius: 10px 0px 0px 10px;
+}
+.input-random{
+    width:80%;
+    margin: 10px;
+    border: 1px solid #858585;
+    border-radius: 2px; 
+    padding: 5px 0px 5px 10px;
+    animation-duration: 2s;
+    animation-timing-function:linear;
+}
+#btn-random-submit{
+    margin:15px 0px 20px 50px;
+    width:100px;
+}
+.btn-clear-random-now{
+    float: right;
+    margin:15px 0px 20px 0px;
+    width:70px;
+}
+@keyframes erorrRandom {
+    from{
+        border:2px solid red;
+    }
+    to{
+        border:1px solid#858585;
+    }
+}
+@media only screen and (max-width:1200px){
+    .result-list-block{
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+    .random-execute{
+        border-radius: 10px;
+    }
+}
+@media only screen and (max-width:780px){
+    .result-list-block{
+        margin-top: 20px;
+    }
+    .result-list-block{
+        margin-top: 10px;
+    }
+    .input-random, #btn-random-submit{
+        font-size: 25px;
+    }
+    .result-random-now>h2{
+        font-size: 35px;
+        padding-top:48px;
+    }
+}
+@media only screen and (max-width:480px){
+    .random-execute{
+        margin:5%;
+        width: 90%;
+    }    
+    #btn-random-submit{
+        margin:15px 0px 20px 0px;
+    }
+}
