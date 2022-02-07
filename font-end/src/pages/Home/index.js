@@ -9,7 +9,7 @@ function App() {
     const fetchData = async () => {
       setIsLoading(false);
       const result = await axios(
-        '/home'
+        '/'
       ).catch(error => console.log(error));
       setDatas({ "user": result.data});
       setIsLoading(true);

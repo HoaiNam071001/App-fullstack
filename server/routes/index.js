@@ -12,7 +12,7 @@ function route(app) {
     });
     app.use('/register', registerRouter);
     
-    app.use('/home', homeRouter);
+    app.use('/', homeRouter);
 }
 
 module.exports = route;
