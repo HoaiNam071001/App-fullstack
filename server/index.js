@@ -24,7 +24,6 @@ const path = require('path');
 // define : post 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-route(app);
 
 app.use(express.static(path.resolve(__dirname, '../font-end/build')));
 
@@ -32,6 +31,7 @@ app.get('*', function(request, response) {
   response.sendFile(path.resolve(__dirname, '../font-end/build', 'index.html'));
 });
 
+route(app);
 
 
 
