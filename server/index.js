@@ -23,7 +23,7 @@ const path = require('path');
 
 
 app.get('*', function(request, response) {
-  response.sendFile(path.resolve(__dirname, '../font-end/build', 'index.html'));
+  response.sendFile(path.resolve(__dirname, './font-end/build', 'index.html'));
 });
 
 // define : post 
