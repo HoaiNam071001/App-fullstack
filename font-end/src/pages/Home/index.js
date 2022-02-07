@@ -2,27 +2,14 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function App() {
-  const [datas, setDatas] = useState({ "user":[{
-    "name": "Hoài Nam",
-    "username": "Bret",
-    "email": "Sincere@april.biz",
-    "phone": "1-770-736-8031 x56442",
-    "website": "hildegard.org",
-  },
-  {
-    "name": "Ervin Howell",
-    "username": "Antonette",
-    "email": "Shanna@melissa.tv",
-    "phone": "010-692-6593 x09125",
-    "website": "anastasia.net"
-  }]});
+  const [datas, setDatas] = useState({ "user":[]});
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(false);
       const result = await axios(
-        '/'
+        '/home'
       ).catch(error => console.log(error));
       setDatas({ "user": result.data});
       setIsLoading(true);
