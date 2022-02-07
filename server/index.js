@@ -2,10 +2,11 @@ const express = require('express');
 const app = express();
 const port = 3060;
 const route = require('./routes');
+const path = require('path');
+
 // const fileUpload = require('express-fileupload');
 // const session = require('express-session');
 // const cookieParser = require('cookie-parser');
-// const path = require('path');
 
 
 // app.use(cookieParser());
@@ -19,6 +20,11 @@ const route = require('./routes');
 // app.use(fileUpload());
 // // Directory to views folder
 // app.set('views', path.join(__dirname, 'resources/views'));
+
+
+app.get('*', function(request, response) {
+  response.sendFile(path.resolve(__dirname, '../font-end/build', 'index.html'));
+});
 
 // define : post 
 app.use(express.json());
