@@ -21,9 +21,11 @@ const path = require('path');
 // // Directory to views folder
 // app.set('views', path.join(__dirname, 'resources/views'));
 
+
 // define : post 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+route(app);
 
 app.use(express.static(path.resolve(__dirname, '../font-end/build')));
 
@@ -31,10 +33,7 @@ app.get('*', function(request, response) {
   response.sendFile(path.resolve(__dirname, '../font-end/build', 'index.html'));
 });
 
-route(app);
-
-
 
 app.listen(process.env.PORT || port, () => {
-  console.log(`Example app listening on port ${process.env.PORT || port}`)
+  console.log(`App listening on port ${process.env.PORT || port}`)
 })
